@@ -464,7 +464,9 @@ public class Main extends JPanel implements ActionListener, KeyListener, WindowL
         //Create an Event temp for latter use
         Event temp; 
 
-        for(int i = 0;i<=size;i++){            
+        for(int i = 0;i<=size;i++){ 
+            //Temporary value to get current week day
+            byte weekDay = dayOfWeek;
             //Read the Event in position i, and set Event temp with its details
             temp = readFile.readEvent(i);
             //If the date of Event temp is today
@@ -474,31 +476,136 @@ public class Main extends JPanel implements ActionListener, KeyListener, WindowL
                 JOptionPane.showMessageDialog(null, temp.name+" is Today"+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
             else if(temp.day==day+6 && temp.month==month+1 && temp.year==year){
-                dayOfWeek=(byte)(dayOfWeek+6);
+                weekDay=(byte)((weekDay+6)%7);
+                if(weekDay==gregorianCalendar.SUNDAY){
+                    giorno = "Sunday";
+                }
+                else if(weekDay==gregorianCalendar.MONDAY){
+                    giorno = "Monday";
+                }
+                else if(weekDay==gregorianCalendar.TUESDAY){
+                    giorno = "Tuesday";
+                }
+                else if(weekDay==gregorianCalendar.WEDNESDAY){
+                    giorno = "Wednesday";
+                }
+                else if(weekDay==gregorianCalendar.THURSDAY){
+                    giorno = "Thursday";
+                }
+                else if(weekDay==gregorianCalendar.FRIDAY){
+                    giorno = "Friday";
+                }
+                else if(weekDay==gregorianCalendar.SATURDAY){
+                    giorno = "Saturday";
+                }
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is in six days and at what time
                 JOptionPane.showMessageDialog(null, temp.name+" is "+giorno+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
             else if(temp.day==day+5 && temp.month==month+1 && temp.year==year){
-                dayOfWeek=(byte)(dayOfWeek+5);
+                weekDay=(byte)((weekDay+5)%7);
+                if(weekDay==gregorianCalendar.SUNDAY){
+                    giorno = "Sunday";
+                }
+                else if(weekDay==gregorianCalendar.MONDAY){
+                    giorno = "Monday";
+                }
+                else if(weekDay==gregorianCalendar.TUESDAY){
+                    giorno = "Tuesday";
+                }
+                else if(weekDay==gregorianCalendar.WEDNESDAY){
+                    giorno = "Wednesday";
+                }
+                else if(weekDay==gregorianCalendar.THURSDAY){
+                    giorno = "Thursday";
+                }
+                else if(weekDay==gregorianCalendar.FRIDAY){
+                    giorno = "Friday";
+                }
+                else if(weekDay==gregorianCalendar.SATURDAY){
+                    giorno = "Saturday";
+                }
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is in five days and at what time
                 JOptionPane.showMessageDialog(null, temp.name+" is "+giorno+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
             else if(temp.day==day+4 && temp.month==month+1 && temp.year==year){
-                dayOfWeek=(byte)(dayOfWeek+4);
+                weekDay=(byte)((weekDay+4)%7);
+                if(weekDay==gregorianCalendar.SUNDAY){
+                    giorno = "Sunday";
+                }
+                else if(weekDay==gregorianCalendar.MONDAY){
+                    giorno = "Monday";
+                }
+                else if(weekDay==gregorianCalendar.TUESDAY){
+                    giorno = "Tuesday";
+                }
+                else if(weekDay==gregorianCalendar.WEDNESDAY){
+                    giorno = "Wednesday";
+                }
+                else if(weekDay==gregorianCalendar.THURSDAY){
+                    giorno = "Thursday";
+                }
+                else if(weekDay==gregorianCalendar.FRIDAY){
+                    giorno = "Friday";
+                }
+                else if(weekDay==gregorianCalendar.SATURDAY){
+                    giorno = "Saturday";
+                }
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is in four days at what time
                 JOptionPane.showMessageDialog(null, temp.name+" is "+giorno+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
             else if(temp.day==day+3 && temp.month==month+1 && temp.year==year){                
-                dayOfWeek=(byte)(dayOfWeek+3);
+                weekDay=(byte)((weekDay+3)%7);
+                if(weekDay==gregorianCalendar.SUNDAY){
+                    giorno = "Sunday";
+                }
+                else if(weekDay==gregorianCalendar.MONDAY){
+                    giorno = "Monday";
+                }
+                else if(weekDay==gregorianCalendar.TUESDAY){
+                    giorno = "Tuesday";
+                }
+                else if(weekDay==gregorianCalendar.WEDNESDAY){
+                    giorno = "Wednesday";
+                }
+                else if(weekDay==gregorianCalendar.THURSDAY){
+                    giorno = "Thursday";
+                }
+                else if(weekDay==gregorianCalendar.FRIDAY){
+                    giorno = "Friday";
+                }
+                else if(weekDay==gregorianCalendar.SATURDAY){
+                    giorno = "Saturday";
+                }
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is in three days and at what time
                 JOptionPane.showMessageDialog(null, temp.name+" is "+giorno+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
             else if(temp.day==day+2 && temp.month==month+1 && temp.year==year){                
-                dayOfWeek=(byte)(dayOfWeek+2);
+                weekDay=(byte)((weekDay+2)%7);
+                if(weekDay==gregorianCalendar.SUNDAY){
+                    giorno = "Sunday";
+                }
+                else if(weekDay==gregorianCalendar.MONDAY){
+                    giorno = "Monday";
+                }
+                else if(weekDay==gregorianCalendar.TUESDAY){
+                    giorno = "Tuesday";
+                }
+                else if(weekDay==gregorianCalendar.WEDNESDAY){
+                    giorno = "Wednesday";
+                }
+                else if(weekDay==gregorianCalendar.THURSDAY){
+                    giorno = "Thursday";
+                }
+                else if(weekDay==gregorianCalendar.FRIDAY){
+                    giorno = "Friday";
+                }
+                else if(weekDay==gregorianCalendar.SATURDAY){
+                    giorno = "Saturday";
+                }
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is in two days and at what time
                 JOptionPane.showMessageDialog(null, temp.name+" is "+giorno+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
@@ -506,7 +613,7 @@ public class Main extends JPanel implements ActionListener, KeyListener, WindowL
             else if(temp.day==day+1 && temp.month==month+1 && temp.year==year){
                 String newLine = System.getProperty("line.separator");
                 //Alert/Remeind the user that the Event is tommorrow and at what time
-                JOptionPane.showMessageDialog(null, temp.name+" is Tommorrow"+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, temp.name+" is Tomorrow"+newLine+"At "+temp.hour+":"+temp.minute, "Reminder", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
